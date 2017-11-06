@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bKz-Q5-AOa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="0V7-q8-Xe5">
+            <objects>
+                <viewController id="bKz-Q5-AOa" customClass="WelcomeViewController" customModule="XLWB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7s9-oY-1hZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="sqo-6N-1S9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kyE-S3-Rpi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_background" translatesAutoresizingMaskIntoConstraints="NO" id="jq1-4i-uOo" userLabel="背景图片">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="DwI-Q7-uA7" userLabel="头像">
+                                <rect key="frame" x="143" y="427" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="b3V-QV-RtS"/>
+                                    <constraint firstAttribute="width" constant="90" id="gSS-rs-Bcc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.masksToBounds">
+                                        <integer key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎回来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quw-od-X18" userLabel="用户昵称">
+                                <rect key="frame" x="147" y="537" width="82" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jq1-4i-uOo" secondAttribute="trailing" id="EiZ-Fd-XDa"/>
+                            <constraint firstItem="jq1-4i-uOo" firstAttribute="leading" secondItem="kyE-S3-Rpi" secondAttribute="leading" id="GbX-9V-VSZ"/>
+                            <constraint firstItem="jq1-4i-uOo" firstAttribute="top" secondItem="7s9-oY-1hZ" secondAttribute="bottom" id="I2C-KF-NZR"/>
+                            <constraint firstItem="quw-od-X18" firstAttribute="top" secondItem="DwI-Q7-uA7" secondAttribute="bottom" constant="20" id="NKU-MD-qfV"/>
+                            <constraint firstItem="DwI-Q7-uA7" firstAttribute="centerX" secondItem="kyE-S3-Rpi" secondAttribute="centerX" id="S4I-YR-eiT"/>
+                            <constraint firstItem="sqo-6N-1S9" firstAttribute="top" secondItem="jq1-4i-uOo" secondAttribute="bottom" id="r6d-yo-KeJ"/>
+                            <constraint firstItem="quw-od-X18" firstAttribute="centerX" secondItem="DwI-Q7-uA7" secondAttribute="centerX" id="tY2-eo-J83"/>
+                            <constraint firstItem="sqo-6N-1S9" firstAttribute="top" secondItem="DwI-Q7-uA7" secondAttribute="bottom" constant="150" id="ueQ-gI-nA8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iconButtomCons" destination="ueQ-gI-nA8" id="MoO-VE-exs"/>
+                        <outlet property="iconImageView" destination="DwI-Q7-uA7" id="WCZ-j3-cLq"/>
+                        <outlet property="titleLabel" destination="quw-od-X18" id="xIi-Km-Whk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQi-5S-RVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-222" y="91"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ad_background" width="320" height="480"/>
+        <image name="avatar_default_big" width="85" height="85"/>
+    </resources>
+</document>
